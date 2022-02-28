@@ -1,0 +1,13 @@
+.navigation {
+    position: absolute;
+    top: 65px;
+    right: 5%;
+
+    & a {
+        margin: 1em;
+        color: #ff6060;
+        &[aria-current="page"] {
+            border-bottom: 1px solid #ff6060;
+        }
+    }
+}

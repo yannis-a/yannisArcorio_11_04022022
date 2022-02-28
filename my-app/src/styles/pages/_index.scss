@@ -1,0 +1,35 @@
+.entete {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: lighten(black, 96%);
+
+    h3 {
+        width: 60%;
+    }
+
+    p {
+        width: 85%;
+        margin: $marge-thin;
+        font-weight: 300;
+    }
+}
+
+.localisation {
+    text-align: center;
+    padding: $marge-medium;
+    background-color: lighten(black, 92%);
+    font-size: 0.9em;
+    width: 100%;
+    position: relative;
+    top: -30px;
+
+    i {
+        margin-right: $marge-medium;
+    }
+}
+
+.restaurant {
+    @include pop-restaurant;
+}

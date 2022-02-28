@@ -1,0 +1,10 @@
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 10px 5%;
+
+    & img {
+        position: relative;
+        width: 100%;
+    }
+}
