@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className="home">
       <Header imgName="home_header.png" />
-      <Cards data={data} />
+      <Cards dataKey={data} />
     </div>
   );
 };

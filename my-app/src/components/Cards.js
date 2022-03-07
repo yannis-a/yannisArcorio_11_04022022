@@ -1,16 +1,10 @@
 import React from "react";
 import Card from "./Card";
 
-const Cards = (props) => {
-  const { data } = props;
+const Cards = ({ dataKey }) => {
+  const cards = dataKey.map((item) => <Card itemId={item.id} />);
 
-  return (
-    <div className="cards">
-      {data.map((e) => (
-        <Card data={e} />
-      ))}
-    </div>
-  );
+  return <div className="cards">{cards}</div>;
 };
 
 export default Cards;

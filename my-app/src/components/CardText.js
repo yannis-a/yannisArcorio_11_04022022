@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 const CardText = (props) => {
   const collapser = useRef();
   const btnCollapse = useRef();
+  const text = props.text.map((t) => <p key={t}>{t}</p>);
 
   const displayCollapser = () => {
     collapser.current.classList.toggle("open");
@@ -21,7 +22,7 @@ const CardText = (props) => {
         </span>
       </div>
       <div ref={collapser} className="close">
-        <p>{props.text}</p>
+        {text}
       </div>
     </div>
   );
