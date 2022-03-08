@@ -19,7 +19,7 @@ const Kasa = () => {
         <h4>{lodgingData.location}</h4>
 
         <Tags tags={lodgingData.tags} />
-        <Rating rate={lodgingData.rating} />
+        <Rating rating={lodgingData.rating} />
         <User  />
       </div>
 

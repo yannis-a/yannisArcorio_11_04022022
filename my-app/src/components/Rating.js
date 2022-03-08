@@ -1,19 +1,21 @@
-import React, { useRef } from "react";
+import React from "react";
 
-const Rating = (props) => {
-  const { rate } = props;
-  const ratingDiv = useRef();
+const Rating = ({ rating }) => {
+  const getIcon = (index) => {
+    if (rating >= index) {
+      return "fa-solid fa-star";
+    }
+    return "fa-regular fa-star";
+  };
 
-  const init = () =>{
-      
-  }
   return (
-    <div ref={ratingDiv} className="rating">
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
+    <div className="rating">
+      {Array(5)
+        .fill(0)
+        .map((_, i) => i + 1)
+        .map((index) => (
+          <i key={index} className={getIcon(index)}></i>
+        ))}
     </div>
   );
 };
