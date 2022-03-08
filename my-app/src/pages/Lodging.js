@@ -13,14 +13,14 @@ const Kasa = () => {
   console.log(lodgingData);
   return (
     <div className="lodging">
-      <Carousel  />
+      <Carousel pictures={lodgingData.pictures} />
       <div className="informations">
         <h1>{lodgingData.title}</h1>
         <h4>{lodgingData.location}</h4>
 
         <Tags tags={lodgingData.tags} />
         <Rating rating={lodgingData.rating} />
-        <User  />
+        <User host={lodgingData.host} />
       </div>
 
       <div className="descriptions">
