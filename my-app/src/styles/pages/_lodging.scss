@@ -1,0 +1,78 @@
+.lodging {
+
+    & .descriptions {
+        display: flex;
+        flex-direction: row;
+
+        & .cardText {
+            width: 100%;
+            margin-left: 5%;
+            margin-right: 5%;
+            flex: auto;
+        }
+    }
+
+    & .informations {
+        display: flex;
+        margin-left: 5%;
+        margin-right: 5%;
+        justify-content: space-between;
+        & > div:nth-child(1) {
+            & h1 {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 36px;
+                line-height: 142.6%;
+                color: #ff6060;
+            }
+
+            & h4 {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 142.6%;
+                color: #ff6060;
+            }
+        }
+
+        & > div:nth-child(2) {
+            & .user {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                & .name {
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 142.6%;
+                    text-align: right;
+                    color: #ff6060;
+                }
+                & .picture {
+                    margin: 10px 0 10px 10px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    height: 64px;
+                    width: 64px;
+                    & img {
+                        height: 100%;
+                        width: auto;
+                    }
+                }
+            }
+            & .rating {
+                text-align: end;
+                & i {
+                    font-size: x-large;
+                    margin: 5px;
+                }
+                & .fa-solid {
+                    color: #ff6060;
+                }
+                & .fa-regular {
+                    color: #e3e3e3;
+                }
+            }
+        }
+    }
+}

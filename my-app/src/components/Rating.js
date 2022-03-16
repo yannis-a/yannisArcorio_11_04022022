@@ -10,8 +10,7 @@ const Rating = ({ rating }) => {
 
   return (
     <div className="rating">
-      {Array(5)
-        .fill(0)
+      {[...new Array(5)]
         .map((_, i) => i + 1)
         .map((index) => (
           <i key={index} className={getIcon(index)}></i>

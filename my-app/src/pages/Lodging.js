@@ -14,19 +14,22 @@ const Kasa = () => {
   return (
     <div className="lodging">
       <Carousel pictures={lodgingData.pictures} />
-      <div className="informations">
-        <h1>{lodgingData.title}</h1>
-        <h4>{lodgingData.location}</h4>
+      <section className="informations">
+        <div>
+          <h1>{lodgingData.title}</h1>
+          <h4>{lodgingData.location}</h4>
+          <Tags tags={lodgingData.tags} />
+        </div>
+        <div>
+          <User host={lodgingData.host} />
+          <Rating rating={lodgingData.rating} />
+        </div>
+      </section>
 
-        <Tags tags={lodgingData.tags} />
-        <Rating rating={lodgingData.rating} />
-        <User host={lodgingData.host} />
-      </div>
-
-      <div className="descriptions">
+      <section className="descriptions">
         <CardText title="Description" text={[lodgingData.description]} />
         <CardText title="Équipements" text={lodgingData.equipments} />
-      </div>
+      </section>
     </div>
   );
 };

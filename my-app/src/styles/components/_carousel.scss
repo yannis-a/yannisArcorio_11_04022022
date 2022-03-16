@@ -1,0 +1,11 @@
+.carousel{
+    border-radius: 25px;
+    margin: 0 5%;
+    width: 90%;
+    height: 415px;
+    overflow: hidden;
+
+    & .previous, .next, .currentCount {
+        position: relative;
+    }
+}
