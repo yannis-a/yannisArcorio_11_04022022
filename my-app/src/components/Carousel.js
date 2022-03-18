@@ -4,10 +4,10 @@ const Carousel = ({ pictures }) => {
   const [index, setIndex] = useState(0);
 
   const handleNextClick = () => {
-    if (index >= pictures.length) {
-      setIndex(() => 0);
-    }
     setIndex((index) => index + 1);
+    if (index === pictures.length - 1) {
+      setIndex(0);
+    }
   };
   const handlePreviousClick = () => {
     if (index <= 0) {
@@ -18,13 +18,19 @@ const Carousel = ({ pictures }) => {
 
   return (
     <div className="carousel">
-      <div onClick={handlePreviousClick} className="previous">
-        <i className="fa-solid fa-chevron-left"></i>
+      <div className="images">
+        <img src={pictures[index]} alt="vue de l'interieur" />
       </div>
-      <img src={pictures[index]} alt="vue de l'interieur" />
-      <div className="currentCount">{index}/{pictures.length}</div>
-      <div onClick={handleNextClick} className="next">
-        <i className="fa-solid fa-chevron-right"></i>
+      <div className="actions">
+        <div onClick={handlePreviousClick} className="previous">
+          <i className="fa-solid fa-chevron-left"></i>
+        </div>
+        <div className="currentCount">
+          {index + 1}/{pictures.length}
+        </div>
+        <div onClick={handleNextClick} className="next">
+          <i className="fa-solid fa-chevron-right"></i>
+        </div>
       </div>
     </div>
   );

@@ -33,7 +33,7 @@ const About = () => {
   };
 
   return (
-    <div className="home">
+    <div className="about">
       <Header imgName="about_header.png" />
       <CardText key={Text1.id} title={Text1.title} text={Text1.textArray} />
       <CardText key={Text2.id} title={Text2.title} text={Text2.textArray} />

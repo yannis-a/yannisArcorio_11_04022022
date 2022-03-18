@@ -9,6 +9,14 @@
             margin-left: 5%;
             margin-right: 5%;
             flex: auto;
+
+            @media screen and (max-width: 768px) {
+                width: auto;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
         }
     }
 
@@ -17,6 +25,11 @@
         margin-left: 5%;
         margin-right: 5%;
         justify-content: space-between;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+
         & > div:nth-child(1) {
             & h1 {
                 font-style: normal;
@@ -33,45 +46,24 @@
                 line-height: 142.6%;
                 color: #ff6060;
             }
+
+            @media screen and (max-width: 768px) {
+                & h1 {
+                    font-size: 24px;
+                }
+    
+                & h4 {
+                    font-size: 14px;
+                }
+            }
         }
 
         & > div:nth-child(2) {
-            & .user {
+            @media screen and (max-width: 768px) {
                 display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                & .name {
-                    font-weight: 500;
-                    font-size: 18px;
-                    line-height: 142.6%;
-                    text-align: right;
-                    color: #ff6060;
-                }
-                & .picture {
-                    margin: 10px 0 10px 10px;
-                    border-radius: 50%;
-                    overflow: hidden;
-                    height: 64px;
-                    width: 64px;
-                    & img {
-                        height: 100%;
-                        width: auto;
-                    }
-                }
-            }
-            & .rating {
-                text-align: end;
-                & i {
-                    font-size: x-large;
-                    margin: 5px;
-                }
-                & .fa-solid {
-                    color: #ff6060;
-                }
-                & .fa-regular {
-                    color: #e3e3e3;
-                }
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: flex-end;
             }
         }
     }

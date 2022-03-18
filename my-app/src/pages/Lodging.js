@@ -10,7 +10,6 @@ import data from "../data.json";
 const Kasa = () => {
   const params = useParams();
   const lodgingData = data.find((e) => e.id === params.id);
-  console.log(lodgingData);
   return (
     <div className="lodging">
       <Carousel pictures={lodgingData.pictures} />

@@ -2,7 +2,7 @@ import React from "react";
 import Card from "./Card";
 
 const Cards = ({ dataKey }) => {
-  const cards = dataKey.map((item) => <Card itemId={item.id} />);
+  const cards = dataKey.map((item, idx) => <Card key={idx} itemId={item.id} />);
 
   return <div className="cards">{cards}</div>;
 };

@@ -3,9 +3,9 @@ import React from "react";
 const Rating = ({ rating }) => {
   const getIcon = (index) => {
     if (rating >= index) {
-      return "fa-solid fa-star";
+      return "fa-solid fa-star fill";
     }
-    return "fa-regular fa-star";
+    return "fa-solid fa-star";
   };
 
   return (

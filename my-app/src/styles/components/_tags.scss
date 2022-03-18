@@ -8,5 +8,9 @@
         padding: 3px 22px;
         color: white;
         margin: 10px 10px 10px 0;
+
+        @media screen and (max-width: 768px) {
+            font-size: 12px;
+        }
     }
 }
